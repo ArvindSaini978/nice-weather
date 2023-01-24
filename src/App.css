@@ -1,0 +1,60 @@
+.logo:hover{
+    animation: logoAnim 0.4s ease-in-out forwards;
+}
+@keyframes logoAnim {
+    0%{scale: 1;}
+    50%{scale: 0.7;}
+    100%{scale: 1;}
+}
+html::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 133, 133);
+    border-radius: 10px;
+    transition: all 0.2s ease-in;
+}
+html::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(252, 76, 76);
+}
+html::-webkit-scrollbar-track{
+    background-color: rgb(219 234 254 / 0.6);
+}
+
+.rightWeatherContainer::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+.rightWeatherContainer::-webkit-scrollbar-thumb{
+    background-color: rgb(139, 211, 255);
+    border-radius: 10px;
+    transition: all 0.2s ease-in;
+}
+.rightWeatherContainer::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(76, 155, 252);
+}
+.tomorrowForecast::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+.tomorrowForecast::-webkit-scrollbar-thumb{
+    background-color: rgb(139, 211, 255);
+    border-radius: 10px;
+    transition: all 0.2s ease-in;
+}
+.tomorrowForecast::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(76, 155, 252);
+}
+
+.location-container{
+    opacity: 0;
+    margin-top: 40px;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+}
+.show-location-container{
+    opacity: 1;
+    margin-top: 0px;
+    visibility: visible;
+}

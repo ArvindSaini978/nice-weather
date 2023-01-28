@@ -1,60 +1,141 @@
-.logo:hover{
+html,
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo:hover {
     animation: logoAnim 0.4s ease-in-out forwards;
 }
+
 @keyframes logoAnim {
-    0%{scale: 1;}
-    50%{scale: 0.7;}
-    100%{scale: 1;}
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 0.7;
+    }
+
+    100% {
+        scale: 1;
+    }
 }
-html::-webkit-scrollbar{
+
+html::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
-html::-webkit-scrollbar-thumb{
+
+html::-webkit-scrollbar-thumb {
     background-color: rgb(255, 133, 133);
     border-radius: 10px;
     transition: all 0.2s ease-in;
 }
-html::-webkit-scrollbar-thumb:hover{
+
+html::-webkit-scrollbar-thumb:hover {
     background-color: rgb(252, 76, 76);
 }
-html::-webkit-scrollbar-track{
+
+html::-webkit-scrollbar-track {
     background-color: rgb(219 234 254 / 0.6);
 }
 
-.rightWeatherContainer::-webkit-scrollbar{
+.customScrollBar::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
-.rightWeatherContainer::-webkit-scrollbar-thumb{
+
+.customScrollBar::-webkit-scrollbar-thumb {
     background-color: rgb(139, 211, 255);
     border-radius: 10px;
     transition: all 0.2s ease-in;
 }
-.rightWeatherContainer::-webkit-scrollbar-thumb:hover{
-    background-color: rgb(76, 155, 252);
-}
-.tomorrowForecast::-webkit-scrollbar{
-    width: 5px;
-    height: 5px;
-}
-.tomorrowForecast::-webkit-scrollbar-thumb{
-    background-color: rgb(139, 211, 255);
-    border-radius: 10px;
-    transition: all 0.2s ease-in;
-}
-.tomorrowForecast::-webkit-scrollbar-thumb:hover{
+
+.customScrollBar::-webkit-scrollbar-thumb:hover {
     background-color: rgb(76, 155, 252);
 }
 
-.location-container{
+.location-container {
     opacity: 0;
     margin-top: 40px;
     transition: all 0.3s ease-in-out;
     visibility: hidden;
 }
-.show-location-container{
+
+.show-location-container {
     opacity: 1;
     margin-top: 0px;
     visibility: visible;
+}
+
+.hamburger {
+    width: 45px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+.hamburger:active{
+    background-color: #e9dcdc;
+}
+.burgerLine{
+    width: 32px;
+    height: 3px;
+    background-color: #555a5d;
+    transition: all 0.3s ease-in;
+}
+.hamburger::after, .hamburger::before{
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 3px;
+    background-color: #555a5d;
+    transition: all 0.3s ease-in;
+}
+.hamburger::after{
+    transform: translateY(8px);
+}
+.hamburger::before{
+    transform: translateY(-8px);
+}
+
+@media only screen and (min-width:540px) {
+    .hamburger{
+        display: none;
+    }
+}
+.sidebar{
+    box-shadow: 0px 0px 27px -7px #838080;
+}
+.toggleSidebar{
+    width: 100%;
+}
+
+.show-sidebar-location-container{
+    margin: 8px 0px;
+    padding: 14px;
+    height: 133px;
+    border: 2px solid rgb(96 165 250);
+}
+
+@media only screen and (min-width:440px) {
+    .toggleSidebar{
+        width: 80%;
+    }
+}
+@media only screen and (min-width:490px) {
+    .toggleSidebar{
+        width: 70%;
+    }
+}
+@media only screen and (min-width:540px) {
+    .sidebar{
+        display: none;
+    }
+}
+.rotateDropDownIcon{
+    transform: rotate(180deg);
 }

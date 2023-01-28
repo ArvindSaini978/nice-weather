@@ -2591,50 +2591,52 @@ export default function Weather(props) {
   }
 
   return (
-    <>{!navigator.onLine ? <NoInternet/> :errorOccured ? <ErrorOccured /> : loading ? <Loading/> :
-      <div className="weatherContainer w-full px-[7%] py-[2pc] bg-blue-100/60 flex flex-col   justify-start items-center">
-        <div className="topContainer w-full h-[90vh] py-[2pc] flex justify-center items-start">
-          <div className="leftWeatherContainer h-[80vh] p-4 w-[60%] mr-10 flex justify-between items-start">
-            <div className="leftLeft w-[48%] flex h-[100%] flex-col">
-              <div className="locationInfo text-[#29293f] font-semibold">{city}, {region} ({country})</div>
-              <div className="conditionImage w-[90%] mt-8 h-[40vh] select-none"><img src="../cloud.png" alt="" className='object-cover select-none' /></div>
-              <div className="tempInfo mt-6 text-6xl text-[#141436] font-semibold tracking-tighter">{props.unit === "celsius" ? `${celTemp} °C` : `${farTemp} °F`}</div>
-              <div className="condition mt-5 ml-2 font-medium text-[#4d3a3a]">{capitalizeFirstconstter(condition)}</div>
+    <>{!navigator.onLine ? <NoInternet /> : errorOccured ? <ErrorOccured /> : loading ? <Loading /> :
+      <div className="weatherContainer w-full px-[3%] 2xsm:px-[7%] py-[2pc] bg-blue-100/60 flex flex-col   justify-start items-center">
+        <div className="topContainer w-full h-auto xlg:h-[90vh] xlg:py-[2pc] mb-[2pc] flex flex-col xlg:flex-row justify-start md:justify-center items-start">
+          <div className="leftWeatherContainer mb-[3pc] md:h-[32pc] xlg:h-[80vh] p-4 w-full xlg:w-[60%] mr-10 flex flex-col md:flex-row justify-between items-start">
+            <div className="leftLeft w-full md:w-[50%] lg:w-[40%] xlg:w-[48%] flex h-[100%] flex-col">
+              <div className="locationInfo text-[#29293f] font-semibold order-1">{city}, {region} ({country})</div>
+              <img src="../cloud.png" alt="" className='object-contain select-none self-center md:self-start order-4 md:order-2 w-[90%] 2xsm:w-[70%] sm:w-[50%] md:w-[95%] xmd:w-[90%]' />
+              <div className="tempInfo text-6xl mt-5 md:mt-0 text-[#141436] font-semibold tracking-tighter order-2 md:order-3">{props.unit === "celsius" ? `${celTemp} °C` : `${farTemp} °F`}</div>
+              <div className="condition mt-5 ml-2 font-medium text-[#4d3a3a] order-3 md:order-4">{capitalizeFirstconstter(condition)}</div>
             </div>
-            <div className="leftRight w-[48%] flex h-[100%] flex-col pl-2">
-              <div className="maxTemp font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Maximum: </span> {props.unit === 'celsius' ? `${maxCelTemp} °C` : `${maxFarTemp} °F`} </div>
-              <div className="minTemp font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Minimum: </span> {props.unit === 'celsius' ? `${minCelTemp} °C` : `${minFarTemp} °F`} </div>
-              <div className="sunrise font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Sunrise: </span> {sunrise} </div>
-              <div className="sunset font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Sunset: </span> {sunset} </div>
-              <div className="pressure font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Pressure: </span> {pressure} millibars</div>
-              <div className="windSpeed font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Wind Speed: </span> {windMPH} mph</div>
-              <div className="windDirection font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Wind Direction: </span> {windAngle}° {windDir} </div>
-              <div className="humidity font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Humidity: </span> {humidity} %</div>
-              <div className="visibility font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Visibility: </span> {visibility} km</div>
-              <div className="airQualityIndex font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Air Quality Index: </span> {airIndex}</div>
-              <div className="lastUpdated font-semibold text-[#302828]"><span className='font-semibold text-lg text-[#5b4b4b] mr-4'>Last Updated: </span> {lastUpdated}</div>
+            <div className="leftRight w-full md:w-[48%] xmd:w-[45%] lg:w-[40%] xlg:w-[48%] flex h-[100%] flex-col pl-2 ">
+              <div className="maxTemp font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Maximum: </span> {props.unit === 'celsius' ? `${maxCelTemp} °C` : `${maxFarTemp} °F`} </div>
+              <div className="minTemp font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Minimum: </span> {props.unit === 'celsius' ? `${minCelTemp} °C` : `${minFarTemp} °F`} </div>
+              <div className="sunrise font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Sunrise: </span> {sunrise} </div>
+              <div className="sunset font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Sunset: </span> {sunset} </div>
+              <div className="pressure font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Pressure: </span> {pressure} millibars</div>
+              <div className="windSpeed font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Wind Speed: </span> {windMPH} mph</div>
+              <div className="windDirection font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Wind Direction: </span> {windAngle}° {windDir} </div>
+              <div className="humidity font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Humidity: </span> {humidity} %</div>
+              <div className="visibility font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Visibility: </span> {visibility} km</div>
+              <div className="airQualityIndex font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Air Quality Index: </span> {airIndex}</div>
+              <div className="lastUpdated font-semibold text-[#302828]"><span className='font-semibold 3xsm:text-lg text-[#5b4b4b] mr-4'>Last Updated: </span> {lastUpdated}</div>
             </div>
           </div>
 
-          <div className="rightWeatherContainer h-[80vh] pb-4 w-[40%] flex flex-col  bg-blue-100 overflow-y-auto relative">
-            <h5 className="text-2xl w-full bg-blue-100 sticky px-4 top-0 pt-2 pb-4 font-medium text-[gray]">Today's Forecast</h5>
-            <div className="flex flex-col h-auto space-y-4 px-4 w-full pt-2 pb-2">
-              {/* eslint-disable-next-line */}
-              {hourArray[0].map((element) => {
-                const elementTime = +element.time.slice(11, 13)
-                if (elementTime >= currentHour) {
-                  return <ForecastItem key={element.time_epoch} hourArray={element} tempUnit={props.unit} />
+          <div className="rightWeatherContainer customScrollBar min-h-[50vh] xlg:h-[80vh] px-2 xlg:px-0 xlg:pb-4 w-full xlg:w-[40%] flex flex-col mb-[3pc] xlg:mb-0 bg-blue-100 overflow-y-auto  relative">
+            <h5 className="text-2xl w-full bg-blue-100 sticky px-2 2xsm:px-4 xlg:px-4 top-0 pt-2 pb-4 font-medium text-[gray]">Today's Forecast</h5>
+            <div className="customScrollBar flex xlg:justify-center items-start w-full h-full overflow-x-auto pb-4 xlg:overflow-y-auto">
+              <div className=" flex flex-row xlg:flex-col h-full xlg:h-auto space-x-4 2xsm:space-x-6 xlg:space-x-0 xlg:space-y-4 px-2 2xsm:px-4 xlg:w-full pt-2 pb-[2pc] xlg:pb-4">
+                {/* eslint-disable-next-line */}
+                {hourArray[0].map((element) => {
+                  const elementTime = +element.time.slice(11, 13)
+                  if (elementTime >= currentHour) {
+                    return <ForecastItem key={element.time_epoch} hourArray={element} tempUnit={props.unit} />
+                  }
+                })
                 }
-              })
-              }
+              </div>
             </div>
 
           </div>
         </div>
-        <div className="bottomContainer w-full mt-4 min-h-[50vh] bg-blue-100 flex flex-col  justify-start items-center">
-          <h5 className="text-2xl px-5 w-full bg-blue-100 sticky top-0 pt-2 pb-4 font-medium text-[gray]">Tomorrow's Forecast</h5>
-          <div className="tomorrowForecast pt-[1pc] pb-[2pc] flex justify-start items-start w-full h-full overflow-x-auto space-x-6">
-            <div className="flex justify-start items-start pb-[1pc] w-auto h-full px-4 space-x-6">
+        <div className="bottomContainer w-full min-h-[50vh] bg-blue-100 flex flex-col  justify-start items-center px-2">
+          <h5 className="text-2xl px-2 2xsm:px-4 w-full bg-blue-100 sticky top-0 pt-2 pb-4 font-medium text-[gray]">Tomorrow's Forecast</h5>
+          <div className="tomorrowForecast customScrollBar pt-[1pc] pb-[2pc] flex justify-start items-start w-full h-full overflow-x-auto space-x-6">
+            <div className="flex justify-start items-start w-auto h-full px-2 2xsm:px-4 space-x-6">
               {/* eslint-disable-next-line */}
               {tomorrowHourArray[0].map((element) => {
                 return <TomorrowForecast key={element.time_epoch} hourArray={element} tempUnit={props.unit} />
@@ -2645,7 +2647,7 @@ export default function Weather(props) {
         </div>
 
       </div>
-      
+
     }</>
   )
 }

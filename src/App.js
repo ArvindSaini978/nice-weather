@@ -8,7 +8,7 @@ import Weather from './components/Weather';
 
 function App() {
   const APIKEY = process.env.REACT_APP_WEATHER_API
-  const [location, setLocation] = useState("Delhi, India");
+  const [location, setLocation] = useState("Jind, Haryana");
   //eslint-disable-next-line
   const [unit, setUnit] = useState("celsius");
   return (

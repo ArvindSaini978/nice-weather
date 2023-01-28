@@ -17,8 +17,8 @@ Tint Weight Converter is a Web based weight converter. It can convert weight fro
 ## Setup
 1. First get an api key from [weatherapi.com](https://www.weatherapi.com/).
 2. Create a file named 
-    .env.local
-    and write
+        .env.local
+        and write
 ## Contribution
 Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
 1. #### Report a bug

@@ -15,10 +15,10 @@ Tint Weight Converter is a Web based weight converter. It can convert weight fro
 * TailwindCSS
 * React
 ## Setup
-1. First get an api key from [weatherapi.com](https://www.weatherapi.com/).
-2. Create a file named 
-        .env.local
-        and write
+1. Run ```npm install``` or ```npm i`` to install all dependencies of the project.
+2. First get an api key from [weatherapi.com](https://www.weatherapi.com/).
+3. Create a file named ```.env.local```.
+4. Paste ```REACT_APP_WEATHER_API = "Your_API_Key"``` in ```.env.local``` and replace ```Your_API_Key``` with your API Key.
 ## Contribution
 Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
 1. #### Report a bug

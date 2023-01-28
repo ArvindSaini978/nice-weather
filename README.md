@@ -18,7 +18,7 @@ Tint Weight Converter is a Web based weight converter. It can convert weight fro
 1. Run ```npm install``` or ```npm i``` to install all dependencies of the project.
 2. Now get an api key from [weatherapi.com](https://www.weatherapi.com/).
 3. Create a file named ```.env.local``` in project directory.
-4. Paste ``REACT_APP_WEATHER_API = "Your_API_Key"`` in ```.env.local``` and replace ```Your_API_Key``` with your API Key.
+4. Paste ```REACT_APP_WEATHER_API = "Your_API_Key"``` in ```.env.local``` and replace ```Your_API_Key``` with your API Key.
 5. To start the Project just run ```npm start```.
 ## Contribution
 Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.

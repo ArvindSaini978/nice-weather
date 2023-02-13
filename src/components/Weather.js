@@ -2592,7 +2592,7 @@ export default function Weather(props) {
 
   return (
     <>{!navigator.onLine ? <NoInternet /> : errorOccured ? <ErrorOccured /> : loading ? <Loading /> :
-      <div className="weatherContainer w-full px-[3%] 2xsm:px-[7%] py-[2pc] bg-blue-100/60 flex flex-col   justify-start items-center">
+      <div className="weatherContainer w-full px-[3%] 2xsm:px-[7%] py-[2pc] bg-hero-pattern flex flex-col   justify-start items-center bg-fixed bg-no-repeat bg-cover bg-center">
         <div className="topContainer w-full h-auto xlg:h-[90vh] xlg:py-[2pc] mb-[2pc] flex flex-col xlg:flex-row justify-start md:justify-center items-start">
           <div className="leftWeatherContainer mb-[3pc] md:h-[32pc] xlg:h-[80vh] p-4 w-full xlg:w-[60%] mr-10 flex flex-col md:flex-row justify-between items-start">
             <div className="leftLeft w-full md:w-[50%] lg:w-[40%] xlg:w-[48%] flex h-[100%] flex-col">

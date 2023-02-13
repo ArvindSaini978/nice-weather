@@ -35,7 +35,11 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/public/bg.jpg')",
+      }
+    },
   },
   plugins: [],
 }

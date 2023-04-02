@@ -10,7 +10,7 @@ A web based reat time weather app. It keeps you up to date by showing you weathe
 ## General Info
 Tint Weight Converter is a Web based weight converter. It can convert weight from many units to another. This is made with pure HTML, CSS, JavaScript.
 ## Preview
-You can check the preview of the app by visiting [nice weather](https://nice-weather.onrender.com)
+You can check the preview of the app by visiting [](https://nice-weather.onrender.com)
 ## Technologies 
 * HTML
 * CSS

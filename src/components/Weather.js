@@ -2547,7 +2547,7 @@ export default function Weather(props) {
 
   async function updateWeather() {
     setLoading(true);
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${props.apiKey}&q=${props.location}&days=2&aqi=yes&alerts=no`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${props.apiKey}&q=${props.location}&days=2&aqi=yes&alerts=no`;
     const data = await fetch(url).catch(() => { setErrorOccured(true) });
 
     const parsedData = await data.json();
@@ -2587,7 +2587,6 @@ export default function Weather(props) {
   }, [])
   document.onload = () => {
     updateWeather();
-    console.log(navigator.online)
   }
 
   return (

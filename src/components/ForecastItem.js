@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 export default function ForecastItem(props) {
     //eslint-disable-next-line
     const [hourArray, setHourArray] = useState(props.hourArray);
-    const airqualityObject = hourArray.air_quality;
-    const airindex = airqualityObject['us-epa-index'];
     return (
 
         <div className="forecastItem xlg:min-h-[120px] w-[12pc] 2xsm:w-[15pc] xlg:w-full p-[10px] xlg:p-[6px] shadow-xl bg-[#e4e4ed] flex flex-col xlg:flex-row">
@@ -16,7 +14,7 @@ export default function ForecastItem(props) {
                 </div>
             </div>
             <div className="forecastRight w-full xlg:w-[60%] flex flex-col">
-                <div className="forecastAir text-sm 2xsm:text-base font-medium text-[#29293f]">Air Index: {airindex}</div>
+                <div className="forecastFeelslike text-sm 2xsm:text-base font-medium text-[#29293f]">Feels like: {props.tempUnit==="celsius" ? `${hourArray.feelslike_c} °C` :`${hourArray.feelslike_f} °F`}</div>
                 <div className="forecastWind text-sm 2xsm:text-base font-medium text-[#29293f]">Wind: {hourArray.wind_mph} mph {hourArray.wind_degree}° {hourArray.wind_dir}</div>
                 <div className="forecastHumidity text-sm 2xsm:text-base font-medium text-[#29293f]">Humidity: {hourArray.humidity} %</div>
                 <div className="forecastVisibility text-sm 2xsm:text-base font-medium text-[#29293f]">Visibility: {hourArray.vis_km} km</div>
